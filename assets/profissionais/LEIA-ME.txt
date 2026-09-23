@@ -1,0 +1,6 @@
+Coloque aqui as fotos reais dos profissionais.
+
+Exemplos de nomes: dr-caina.jpg e dra-julia.jpg.
+Depois preencha os caminhos no arquivo conteudo.js, na raiz do site.
+
+As iniciais CL e JM são exibidas enquanto não há fotos configuradas.

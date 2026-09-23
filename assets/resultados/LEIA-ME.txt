@@ -1,0 +1,8 @@
+Coloque aqui os pares de fotografias reais de antes e depois.
+
+Exemplo: caso-01-antes.jpg e caso-01-depois.jpg.
+Adicione o caso na lista casos, no arquivo conteudo.js.
+O exemplo comentado nesse arquivo mostra todos os campos.
+
+Use fotos com a mesma proporção e enquadramento para uma comparação coerente.
+Nenhuma imagem clínica de exemplo foi incluída.

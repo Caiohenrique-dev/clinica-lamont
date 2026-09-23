@@ -1,0 +1,3574 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#112847">
+
+  <meta
+    name="description"
+    content="Conheça a Clínica LaMont, em Miguel Pereira. Odontologia, implantes e estética facial. Converse com a equipe e agende sua avaliação."
+  >
+
+  <meta property="og:title" content="Clínica LaMont — Um novo motivo para sorrir">
+
+  <meta
+    property="og:description"
+    content="Odontologia e estética em Miguel Pereira. Conheça a LaMont e converse com nossa equipe."
+  >
+
+  <meta property="og:type" content="website">
+  <meta name="color-scheme" content="light">
+
+  <title>Clínica LaMont | Odontologia e Estética em Miguel Pereira</title>
+
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23112847'/%3E%3Cpath d='M20 15v33h26v-7H28V15Z' fill='%23e9c774'/%3E%3C/svg%3E"
+  >
+
+  <link rel="stylesheet" href="styles.css">
+<script src="conteudo.js" defer></script>
+  <script src="script.js" defer></script>
+
+  <style>
+    /*
+      FOTOS DOS PROFISSIONAIS
+
+      Coloque as fotos nestes caminhos:
+
+      assets/profissionais/dr-caina.jpg
+      assets/profissionais/dra-julia.jpg
+
+      No computador, os quadros ficam compactos.
+      No celular, permanece a foto inteira.
+    */
+
+    #profissionais .team-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      align-items: start;
+      gap: 28px;
+    }
+
+    #profissionais .professional-card {
+      display: flex;
+      flex-direction: column;
+      align-self: start;
+
+      width: 100%;
+      height: auto;
+      min-width: 0;
+
+      overflow: hidden;
+
+      border: 1px solid #dde3e8;
+      border-radius: 12px;
+      background: #fff;
+    }
+
+    #profissionais .professional-photo {
+      position: relative;
+      display: block;
+
+      width: 100%;
+      height: auto;
+      min-height: 0;
+      max-height: none;
+
+      aspect-ratio: auto;
+
+      margin: 0;
+      padding: 0;
+
+      overflow: hidden;
+      line-height: 0;
+
+      background: #eef1f2;
+    }
+
+    #profissionais .professional-photo img {
+      position: static;
+      inset: auto;
+
+      display: block;
+
+      width: 100%;
+      max-width: 100%;
+
+      height: auto;
+      min-height: 0;
+      max-height: none;
+
+      aspect-ratio: auto;
+      object-fit: contain;
+      object-position: center;
+
+      margin: 0;
+      padding: 0;
+      border: 0;
+
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+    }
+
+    #profissionais .professional-photo img[hidden],
+    #profissionais .photo-fallback[hidden] {
+      display: none !important;
+    }
+
+    #profissionais .photo-fallback {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 100%;
+      min-height: 280px;
+
+      padding: 35px;
+
+      background: #1b3658;
+      color: #e9c774;
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 80px;
+      font-style: italic;
+      line-height: 1;
+    }
+
+    #profissionais .professional-photo-light .photo-fallback {
+      background: #eef1f2;
+      color: #8a6c2d;
+    }
+
+    #profissionais .professional-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      width: 100%;
+      min-width: 0;
+
+      padding: 30px;
+    }
+
+    #profissionais .professional-content h3 {
+      margin: 0 0 14px;
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(28px, 3vw, 36px);
+      font-weight: 400;
+
+      line-height: 1.2;
+      letter-spacing: -0.8px;
+
+      color: #172c47;
+    }
+
+    #profissionais .professional-badge {
+      display: inline-block;
+      margin-bottom: 16px;
+
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.5;
+      letter-spacing: 1.2px;
+
+      color: #7d6229;
+    }
+
+    #profissionais .professional-field {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #617085;
+    }
+
+    #profissionais .professional-register {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #172c47;
+    }
+
+    #profissionais .professional-instagram {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      width: 100%;
+
+      margin-top: 24px;
+      padding-top: 18px;
+
+      border-top: 1px solid #dde3e8;
+
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    #profissionais .professional-instagram span {
+      min-width: 0;
+      overflow-wrap: anywhere;
+    }
+
+    #profissionais .professional-instagram .icon {
+      flex-shrink: 0;
+    }
+
+    #profissionais .professional-instagram .icon:last-child {
+      margin-left: auto;
+    }
+
+    /* COMPUTADOR: FOTO AO LADO DAS INFORMAÇÕES */
+
+    @media (min-width: 701px) {
+      #profissionais .team-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: stretch;
+        gap: 24px;
+      }
+
+      #profissionais .professional-card {
+        display: grid;
+        grid-template-columns: 0.85fr 1.15fr;
+        align-self: stretch;
+        align-items: stretch;
+
+        min-height: 320px;
+        height: auto;
+      }
+
+      #profissionais .professional-photo {
+        position: relative;
+        align-self: stretch;
+
+        width: 100%;
+        height: auto;
+        min-height: 320px;
+
+        overflow: hidden;
+      }
+
+      #profissionais .professional-photo img {
+        position: absolute;
+        inset: 0;
+
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+        object-position: center top;
+      }
+
+      #profissionais .photo-fallback {
+        position: absolute;
+        inset: 0;
+
+        height: 100%;
+        min-height: 0;
+      }
+
+      #profissionais .professional-content {
+        padding: 25px 22px;
+      }
+
+      #profissionais .professional-content h3 {
+        font-size: 28px;
+        line-height: 1.2;
+      }
+
+      #profissionais .professional-badge {
+        font-size: 11px;
+        letter-spacing: 0.8px;
+      }
+
+      #profissionais .professional-register {
+        margin-bottom: 20px;
+      }
+
+      #profissionais .professional-instagram {
+        margin-top: auto;
+        padding-top: 18px;
+        font-size: 12px;
+      }
+    }
+
+    /* TELAS INTERMEDIÁRIAS: FOTO COM ALTURA LIMITADA */
+
+    @media (min-width: 701px) and (max-width: 1100px) {
+      #profissionais .professional-card {
+        grid-template-columns: 1fr;
+      }
+
+      #profissionais .professional-photo {
+        height: 280px;
+        min-height: 280px;
+      }
+
+      #profissionais .professional-instagram {
+        margin-top: 22px;
+      }
+    }
+
+    /* CELULAR: MANTÉM A FOTO INTEIRA */
+
+    @media (max-width: 700px) {
+      #profissionais .team-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      #profissionais .professional-content {
+        padding: 25px;
+      }
+
+      #profissionais .professional-content h3 {
+        font-size: 30px;
+      }
+
+      #profissionais .professional-photo,
+      #profissionais .professional-photo img {
+        height: auto;
+        min-height: 0;
+        max-height: none;
+        aspect-ratio: auto;
+      }
+    }
+
+    /* PROFISSIONAL RESPONSÁVEL EM CADA ANTES E DEPOIS */
+    #resultados .result-professional {
+      margin: 8px 0 0;
+      color: #7d6229;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 1.45;
+      letter-spacing: 0.2px;
+    }
+
+    #resultados .result-professional strong {
+      color: #172c47;
+      font-weight: 600;
+    }
+
+    @media (max-width: 700px) {
+      #resultados .result-professional {
+        font-size: 12px;
+      }
+    }
+
+
+
+    /* =====================================================
+       BANNER PRINCIPAL — MESMA IMAGEM NO PC E CELULAR
+       Ocupa toda a largura da tela, sem margens laterais.
+    ====================================================== */
+
+    .home-banner {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      background: #112847;
+      overflow: hidden;
+    }
+
+    .home-banner .container {
+      width: 100% !important;
+      max-width: none !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    .home-banner-link {
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      border-radius: 0;
+      overflow: hidden;
+      box-shadow: none;
+      background: transparent;
+    }
+
+    .home-banner picture {
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    .home-banner img {
+      display: block;
+      width: 100%;
+      max-width: none;
+      height: auto;
+      margin: 0;
+      padding: 0;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    @media (max-width: 900px) {
+      .home-banner,
+      .home-banner .container,
+      .home-banner-link,
+      .home-banner picture,
+      .home-banner img {
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        border-radius: 0 !important;
+      }
+
+      .home-banner img {
+        height: auto !important;
+        aspect-ratio: auto !important;
+        object-fit: contain !important;
+        object-position: center !important;
+      }
+    }
+
+
+    /* HEADER TRANSPARENTE SOBRE O BANNER */
+    body { margin: 0; }
+    .site-header {
+      position: absolute !important; top: 0 !important; left: 0 !important; right: 0 !important;
+      width: 100% !important; z-index: 1000 !important;
+      background: transparent !important; border: 0 !important; box-shadow: none !important;
+    }
+    .site-header .header-inner { min-height: 96px; }
+    .site-header .brand,
+    .site-header .main-nav a,
+    .site-header .header-cta,
+    .site-header .menu-toggle { position: relative; z-index: 2; }
+    .site-header .main-nav a { color: #112847 !important; text-shadow: 0 1px 10px rgba(255,255,255,.65); }
+    .site-header .header-cta {
+      color: #112847 !important; border-color: rgba(17,40,71,.45) !important;
+      background: rgba(255,255,255,.72) !important;
+      backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+    }
+    .site-header .header-cta:hover { background: rgba(255,255,255,.92) !important; }
+    .site-header .brand-text { color: #112847 !important; text-shadow: 0 1px 12px rgba(255,255,255,.7); }
+    .site-header .brand-text small { color: #112847 !important; }
+    .site-header .brand-mark { color: #b8903b !important; text-shadow: 0 1px 12px rgba(255,255,255,.75); }
+    main#conteudo { margin-top: 0 !important; padding-top: 0 !important; }
+
+    /* BANNER / CARROSSEL */
+    .home-banner { position: relative; width: 100%; margin: 0; padding: 0; overflow: hidden; background: #fff !important; }
+    .home-banner .container { width: 100% !important; max-width: none !important; margin: 0 !important; padding: 0 !important; }
+    .banner-carousel { position: relative; width: 100%; overflow: hidden; background: #fff; }
+    .banner-track { display: flex; width: 100%; transform: translate3d(0,0,0); transition: transform .55s cubic-bezier(.22,.61,.36,1); will-change: transform; }
+    .banner-slide { position: relative; flex: 0 0 100%; width: 100%; }
+    .banner-slide a, .banner-slide picture { display: block; width: 100%; }
+    .banner-slide img { display: block; width: 100%; height: auto; max-width: none; margin: 0; object-fit: cover; object-position: center; user-select: none; -webkit-user-drag: none; }
+    .banner-dots { position: absolute; z-index: 8; left: 50%; bottom: 14px; transform: translateX(-50%); display: flex; align-items: center; justify-content: center; gap: 7px; padding: 7px 10px; border-radius: 999px; background: rgba(17,40,71,.22); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+    .banner-dot { width: 7px; height: 7px; padding: 0; border: 0; border-radius: 999px; background: rgba(255,255,255,.58); cursor: pointer; transition: width .25s ease, background .25s ease, transform .25s ease; }
+    .banner-dot.active { width: 22px; background: #fff; }
+
+    @media (min-width: 901px) {
+      .banner-slide:not(:first-child) { display: none; }
+      .banner-dots { display: none; }
+    }
+
+    @media (max-width: 900px) {
+      .site-header .header-inner { min-height: 72px; padding-top: 8px; padding-bottom: 8px; }
+      .site-header .header-cta { display: none !important; }
+      .site-header .brand { transform: scale(.86); transform-origin: left center; }
+      .site-header .menu-toggle { background: rgba(255,255,255,.78) !important; border: 1px solid rgba(17,40,71,.18) !important; border-radius: 12px; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+      .site-header .menu-toggle span { background: #112847 !important; }
+      .home-banner, .home-banner .container, .banner-carousel, .banner-track, .banner-slide { width: 100% !important; max-width: none !important; margin: 0 !important; padding: 0 !important; }
+      .banner-slide img { width: 100% !important; height: auto !important; aspect-ratio: auto !important; object-fit: cover !important; object-position: center !important; }
+      .banner-dots { bottom: 10px; }
+    }
+
+
+    /* =====================================================
+       AJUSTE FINAL DO TOPO / HEADER
+    ====================================================== */
+
+    .site-header {
+      position: absolute !important;
+      inset: 0 0 auto 0 !important;
+      z-index: 1000 !important;
+
+      width: 100% !important;
+      background: transparent !important;
+      border: 0 !important;
+      box-shadow: none !important;
+    }
+
+    /* Remove totalmente o nome/logo do header.
+       O logo que aparece passa a ser somente o que já existe no banner. */
+    .site-header .brand {
+      display: none !important;
+    }
+
+    .site-header .header-inner {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: flex-end !important;
+      gap: 34px !important;
+
+      min-height: 88px !important;
+      width: min(100% - 48px, 1540px) !important;
+      margin-inline: auto !important;
+    }
+
+    .site-header .main-nav {
+      margin-left: auto !important;
+    }
+
+    .site-header .main-nav a {
+      color: #112847 !important;
+      text-shadow:
+        0 1px 4px rgba(255,255,255,.95),
+        0 0 12px rgba(255,255,255,.7) !important;
+    }
+
+    .site-header .header-cta {
+      flex-shrink: 0 !important;
+      color: #112847 !important;
+      border-color: rgba(17,40,71,.36) !important;
+      background: rgba(255,255,255,.80) !important;
+      box-shadow: 0 8px 26px rgba(17,40,71,.08) !important;
+
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .site-header .header-cta:hover {
+      background: #fff !important;
+    }
+
+    main#conteudo {
+      margin-top: 0 !important;
+      padding-top: 0 !important;
+    }
+
+
+    /* =====================================================
+       CARROSSEL — FUNCIONA NO PC E NO CELULAR
+    ====================================================== */
+
+    .home-banner {
+      position: relative;
+      width: 100%;
+      margin: 0 !important;
+      padding: 0 !important;
+      overflow: hidden;
+      background: #fff !important;
+    }
+
+    .home-banner .container {
+      width: 100% !important;
+      max-width: none !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    .banner-carousel {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .banner-track {
+      display: flex !important;
+      width: 100% !important;
+      transform: translate3d(0,0,0);
+      transition: transform .6s cubic-bezier(.22,.61,.36,1);
+      will-change: transform;
+    }
+
+    /* IMPORTANTE:
+       todos os banners continuam no track também no computador. */
+    .banner-slide,
+    .banner-slide:not(:first-child) {
+      display: block !important;
+      position: relative;
+      flex: 0 0 100% !important;
+      width: 100% !important;
+    }
+
+    .banner-slide a,
+    .banner-slide picture {
+      display: block;
+      width: 100%;
+    }
+
+    .banner-slide img {
+      display: block;
+      width: 100% !important;
+      max-width: none !important;
+      height: auto !important;
+      margin: 0 !important;
+      object-fit: cover !important;
+      object-position: center !important;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+
+    /* Indicadores estilo stories/carrossel */
+    .banner-dots {
+      display: flex !important;
+
+      position: absolute;
+      z-index: 20;
+      left: 50%;
+      bottom: 14px;
+      transform: translateX(-50%);
+
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+
+      padding: 7px 10px;
+      border-radius: 999px;
+
+      background: rgba(17,40,71,.25);
+      box-shadow: 0 4px 14px rgba(0,0,0,.08);
+
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .banner-dot {
+      width: 7px;
+      height: 7px;
+      padding: 0;
+      border: 0;
+      border-radius: 999px;
+      background: rgba(255,255,255,.60);
+      cursor: pointer;
+      transition: width .25s ease, background .25s ease;
+    }
+
+    .banner-dot.active {
+      width: 24px;
+      background: #fff;
+    }
+
+
+    /* =====================================================
+       MENU MOBILE CORRIGIDO
+    ====================================================== */
+
+    .mobile-nav-cta {
+      display: none;
+    }
+
+    @media (max-width: 900px) {
+
+      .site-header {
+        pointer-events: none;
+      }
+
+      .site-header .header-inner {
+        width: 100% !important;
+        min-height: 70px !important;
+        padding: 8px 12px !important;
+        margin: 0 !important;
+        justify-content: flex-end !important;
+        gap: 0 !important;
+
+        pointer-events: none;
+      }
+
+      /* Tudo que precisa ser clicável volta a receber clique. */
+      .site-header .menu-toggle,
+      .site-header .main-nav {
+        pointer-events: auto;
+      }
+
+      .site-header .header-cta {
+        display: none !important;
+      }
+
+      .site-header .menu-toggle {
+        position: relative !important;
+        z-index: 1003 !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 6px !important;
+
+        width: 52px !important;
+        height: 52px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+
+        border: 1px solid rgba(17,40,71,.15) !important;
+        border-radius: 14px !important;
+
+        background: rgba(255,255,255,.92) !important;
+        box-shadow: 0 7px 24px rgba(17,40,71,.12) !important;
+
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+
+      .site-header .menu-toggle span {
+        display: block !important;
+        width: 22px !important;
+        height: 2px !important;
+        margin: 0 !important;
+        border-radius: 99px !important;
+        background: #112847 !important;
+        transform-origin: center !important;
+        transition: transform .25s ease, opacity .25s ease !important;
+      }
+
+      .site-header .menu-toggle[aria-expanded="true"] span:first-child {
+        transform: translateY(4px) rotate(45deg) !important;
+      }
+
+      .site-header .menu-toggle[aria-expanded="true"] span:last-child {
+        transform: translateY(-4px) rotate(-45deg) !important;
+      }
+
+      /* Painel do menu: pequeno, branco e legível. */
+      .site-header .main-nav {
+        position: absolute !important;
+        z-index: 1002 !important;
+
+        top: 68px !important;
+        right: 12px !important;
+        left: auto !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 0 !important;
+
+        width: min(310px, calc(100vw - 24px)) !important;
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+
+        margin: 0 !important;
+        padding: 8px !important;
+
+        border: 1px solid rgba(17,40,71,.10) !important;
+        border-radius: 18px !important;
+
+        background: rgba(255,255,255,.97) !important;
+        box-shadow: 0 18px 46px rgba(17,40,71,.20) !important;
+
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+
+        transform: translateY(-8px) scale(.98) !important;
+        transform-origin: top right !important;
+
+        transition:
+          opacity .22s ease,
+          transform .22s ease,
+          visibility .22s ease !important;
+
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+      }
+
+      /* Compatível com várias classes que scripts costumam usar,
+         e também com a classe controlada pelo JS abaixo. */
+      body.lamont-menu-open .site-header .main-nav,
+      .site-header .main-nav.is-open,
+      .site-header .main-nav.open,
+      .site-header .main-nav.active {
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+        transform: translateY(0) scale(1) !important;
+      }
+
+      .site-header .main-nav > a {
+        display: block !important;
+        width: 100% !important;
+
+        margin: 0 !important;
+        padding: 14px 14px !important;
+
+        border: 0 !important;
+        border-bottom: 1px solid #edf0f3 !important;
+        border-radius: 10px !important;
+
+        background: transparent !important;
+
+        color: #112847 !important;
+        font-size: 16px !important;
+        font-weight: 600 !important;
+        line-height: 1.25 !important;
+        text-align: left !important;
+        text-shadow: none !important;
+      }
+
+      .site-header .main-nav > a:hover,
+      .site-header .main-nav > a:focus {
+        background: #f4f6f8 !important;
+      }
+
+      .site-header .main-nav > a:last-child {
+        border-bottom: 0 !important;
+      }
+
+      .site-header .main-nav .mobile-nav-cta {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        margin-top: 8px !important;
+        padding: 14px !important;
+
+        border: 0 !important;
+        border-radius: 12px !important;
+
+        background: #112847 !important;
+        color: #e9c774 !important;
+
+        text-align: center !important;
+        text-shadow: none !important;
+      }
+
+      .banner-dots {
+        bottom: 10px !important;
+      }
+    }
+
+
+    /* =====================================================
+       TAMANHO DOS BANNERS
+       PC: um pouco mais baixo
+       CELULAR: mais alto / maior
+    ====================================================== */
+
+    @media (min-width: 901px) {
+      .banner-carousel,
+      .banner-slide,
+      .banner-slide a,
+      .banner-slide picture {
+        height: clamp(380px, 30vw, 520px) !important;
+      }
+
+      .banner-slide img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center !important;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .banner-carousel,
+      .banner-slide,
+      .banner-slide a,
+      .banner-slide picture {
+        height: clamp(280px, 82vw, 380px) !important;
+      }
+
+      .banner-slide img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center center !important;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .banner-carousel,
+      .banner-slide,
+      .banner-slide a,
+      .banner-slide picture {
+        height: clamp(300px, 88vw, 360px) !important;
+      }
+    }
+
+
+    /* =====================================================
+       BANNER — MOSTRAR A IMAGEM COMPLETA, SEM CORTAR
+    ====================================================== */
+
+    .banner-carousel,
+    .banner-slide,
+    .banner-slide a,
+    .banner-slide picture {
+      height: auto !important;
+      min-height: 0 !important;
+      max-height: none !important;
+    }
+
+    .banner-slide img {
+      display: block !important;
+      width: 100% !important;
+      max-width: 100% !important;
+
+      height: auto !important;
+      min-height: 0 !important;
+      max-height: none !important;
+
+      object-fit: contain !important;
+      object-position: center !important;
+
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    @media (min-width: 901px) {
+      .banner-carousel,
+      .banner-slide,
+      .banner-slide a,
+      .banner-slide picture {
+        height: auto !important;
+      }
+
+      .banner-slide img {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: contain !important;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .banner-carousel,
+      .banner-slide,
+      .banner-slide a,
+      .banner-slide picture {
+        height: auto !important;
+      }
+
+      .banner-slide img {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: contain !important;
+      }
+    }
+
+
+    /* =====================================================
+       BANNER GRANDE + IMAGEM INTEIRA
+       Mantém o tamanho grande, mas sem cortar a arte.
+       O espaço que sobraria é preenchido pela própria imagem
+       desfocada ao fundo.
+    ====================================================== */
+
+    .banner-slide {
+      position: relative !important;
+      overflow: hidden !important;
+      background: #fff !important;
+    }
+
+    .banner-slide::before {
+      content: "";
+      position: absolute;
+      inset: -20px;
+      z-index: 0;
+
+      background-image: var(--banner-bg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      filter: blur(18px);
+      transform: scale(1.08);
+      opacity: .28;
+    }
+
+    .banner-slide::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: rgba(255,255,255,.18);
+      pointer-events: none;
+    }
+
+    .banner-slide a,
+    .banner-slide picture {
+      position: relative !important;
+      z-index: 2 !important;
+
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+
+      width: 100% !important;
+      height: 100% !important;
+    }
+
+    .banner-slide img {
+      position: relative !important;
+      z-index: 2 !important;
+
+      display: block !important;
+      width: 100% !important;
+      height: 100% !important;
+
+      object-fit: contain !important;
+      object-position: center !important;
+    }
+
+    /* PC: um pouco mais baixo, como você pediu antes */
+    @media (min-width: 901px) {
+      .banner-carousel,
+      .banner-track,
+      .banner-slide {
+        height: clamp(380px, 30vw, 520px) !important;
+      }
+    }
+
+    /* Celular: maior, mas mostrando a imagem inteira */
+    @media (max-width: 900px) {
+      .banner-carousel,
+      .banner-track,
+      .banner-slide {
+        height: clamp(300px, 88vw, 380px) !important;
+      }
+    }
+
+
+    /* NAV BRANCA COM LOGO EM IMAGEM */
+    .site-header {
+      position: sticky !important;
+      top: 0 !important;
+      left: auto !important;
+      right: auto !important;
+      inset: auto !important;
+      z-index: 2000 !important;
+      width: 100% !important;
+      background: #fff !important;
+      border: 0 !important;
+      border-bottom: 1px solid rgba(17,40,71,.08) !important;
+      box-shadow: 0 8px 28px rgba(17,40,71,.05) !important;
+    }
+
+    .site-header .header-inner {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      width: min(100% - 40px, 1480px) !important;
+      min-height: 86px !important;
+      margin: 0 auto !important;
+      padding: 10px 0 !important;
+      gap: 28px !important;
+    }
+
+    .site-header .brand {
+      display: flex !important;
+      align-items: center !important;
+      flex: 0 0 auto !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      transform: none !important;
+    }
+
+    .site-header .nav-logo {
+      display: block !important;
+      width: auto !important;
+      height: 62px !important;
+      max-width: 280px !important;
+      object-fit: contain !important;
+      object-position: left center !important;
+    }
+
+    .site-header .main-nav {
+      display: flex !important;
+      align-items: center !important;
+      gap: 32px !important;
+      margin-left: auto !important;
+    }
+
+    .site-header .main-nav > a:not(.mobile-nav-cta) {
+      color: #112847 !important;
+      font-size: 15px !important;
+      font-weight: 600 !important;
+      line-height: 1 !important;
+      padding: 10px 0 !important;
+      margin: 0 !important;
+      background: transparent !important;
+      border: 0 !important;
+      text-shadow: none !important;
+      text-decoration: none !important;
+    }
+
+    .site-header .main-nav > a:not(.mobile-nav-cta):hover {
+      color: #b8903b !important;
+    }
+
+    .site-header .header-cta {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 10px !important;
+      flex: 0 0 auto !important;
+      min-height: 48px !important;
+      padding: 0 20px !important;
+      border: 1px solid #b8903b !important;
+      border-radius: 10px !important;
+      background: #fff !important;
+      color: #8a6c2d !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
+      font-weight: 700 !important;
+    }
+
+    .site-header .header-cta:hover {
+      background: #b8903b !important;
+      color: #fff !important;
+    }
+
+    main#conteudo {
+      margin-top: 0 !important;
+      padding-top: 0 !important;
+    }
+
+    @media (max-width: 900px) {
+      .site-header {
+        pointer-events: auto !important;
+      }
+
+      .site-header .header-inner {
+        width: 100% !important;
+        min-height: 72px !important;
+        padding: 8px 14px !important;
+        margin: 0 !important;
+        gap: 12px !important;
+        pointer-events: auto !important;
+      }
+
+      .site-header .brand {
+        display: flex !important;
+        flex: 1 1 auto !important;
+        transform: none !important;
+      }
+
+      .site-header .nav-logo {
+        height: 52px !important;
+        max-width: min(230px, calc(100vw - 95px)) !important;
+      }
+
+      .site-header .header-cta {
+        display: none !important;
+      }
+
+      .site-header .menu-toggle {
+        position: relative !important;
+        z-index: 2003 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 6px !important;
+        flex: 0 0 auto !important;
+        width: 48px !important;
+        height: 48px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        border: 1px solid rgba(17,40,71,.12) !important;
+        border-radius: 12px !important;
+        background: #fff !important;
+        box-shadow: 0 5px 18px rgba(17,40,71,.08) !important;
+        pointer-events: auto !important;
+      }
+
+      .site-header .menu-toggle span {
+        display: block !important;
+        width: 22px !important;
+        height: 2px !important;
+        background: #112847 !important;
+        border-radius: 99px !important;
+      }
+
+      .site-header .main-nav {
+        position: absolute !important;
+        z-index: 2002 !important;
+        top: calc(100% + 8px) !important;
+        right: 12px !important;
+        left: auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 0 !important;
+        width: min(320px, calc(100vw - 24px)) !important;
+        margin: 0 !important;
+        padding: 8px !important;
+        border: 1px solid rgba(17,40,71,.09) !important;
+        border-radius: 16px !important;
+        background: #fff !important;
+        box-shadow: 0 18px 45px rgba(17,40,71,.16) !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+        transform: translateY(-8px) !important;
+        transition: opacity .2s ease, transform .2s ease, visibility .2s ease !important;
+      }
+
+      body.lamont-menu-open .site-header .main-nav,
+      .site-header .main-nav.is-open,
+      .site-header .main-nav.open,
+      .site-header .main-nav.active {
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+        transform: translateY(0) !important;
+      }
+
+      .site-header .main-nav > a:not(.mobile-nav-cta) {
+        display: block !important;
+        width: 100% !important;
+        padding: 14px !important;
+        border-bottom: 1px solid #edf0f3 !important;
+        border-radius: 8px !important;
+        color: #112847 !important;
+        text-align: left !important;
+        text-shadow: none !important;
+      }
+
+      .site-header .main-nav .mobile-nav-cta {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin-top: 8px !important;
+        padding: 14px !important;
+        border-radius: 10px !important;
+        background: #112847 !important;
+        color: #e9c774 !important;
+        font-weight: 700 !important;
+        text-align: center !important;
+        text-shadow: none !important;
+      }
+    }
+
+
+    /* =====================================================
+       RODAPÉ NOVO
+    ====================================================== */
+
+    .site-footer {
+      background: #0d2440 !important;
+      color: #dbe4ee !important;
+      padding: 0 !important;
+    }
+
+    .site-footer .footer-pro {
+      padding-top: 46px !important;
+      padding-bottom: 34px !important;
+    }
+
+    .site-footer .footer-main {
+      display: grid !important;
+      grid-template-columns: minmax(0, 1.2fr) minmax(260px, .8fr) !important;
+      gap: 50px !important;
+      align-items: start !important;
+      padding-bottom: 34px !important;
+    }
+
+    .site-footer .footer-brand-area {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      gap: 18px !important;
+    }
+
+    .site-footer .footer-logo-link {
+      display: inline-flex !important;
+      align-items: center !important;
+      width: fit-content !important;
+      text-decoration: none !important;
+    }
+
+    .site-footer .footer-logo-img {
+      display: block !important;
+      width: auto !important;
+      height: 72px !important;
+      max-width: 300px !important;
+      object-fit: contain !important;
+      object-position: left center !important;
+    }
+
+    .site-footer .footer-slogan {
+      max-width: 470px !important;
+      margin: 0 !important;
+      color: #aebdcd !important;
+      font-size: 15px !important;
+      line-height: 1.7 !important;
+    }
+
+    .site-footer .footer-info-area {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      gap: 22px !important;
+    }
+
+    .site-footer .footer-social {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 10px !important;
+      color: #ffffff !important;
+      text-decoration: none !important;
+      font-weight: 600 !important;
+    }
+
+    .site-footer .footer-social .icon {
+      width: 21px !important;
+      height: 21px !important;
+      color: #e9c774 !important;
+    }
+
+    .site-footer .footer-registration {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 10px !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      border: 0 !important;
+      color: #b8c5d3 !important;
+      font-size: 14px !important;
+      line-height: 1.55 !important;
+    }
+
+    .site-footer .footer-bottom {
+      display: grid !important;
+      grid-template-columns: 1fr auto auto !important;
+      gap: 26px !important;
+      align-items: center !important;
+
+      padding-top: 26px !important;
+      border-top: 1px solid rgba(255,255,255,.10) !important;
+
+      color: #8fa2b7 !important;
+      font-size: 13px !important;
+      line-height: 1.55 !important;
+    }
+
+    .site-footer .footer-bottom a {
+      color: #c6d1dd !important;
+      text-decoration: none !important;
+    }
+
+    .site-footer .footer-developer strong {
+      color: #e9c774 !important;
+      font-weight: 700 !important;
+    }
+
+    .site-footer .footer-developer:hover strong,
+    .site-footer .footer-top-link:hover {
+      color: #ffffff !important;
+    }
+
+
+    /* =====================================================
+       BOTÃO WHATSAPP INFERIOR
+    ====================================================== */
+
+    .mobile-contact.whatsapp-contact {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 11px !important;
+
+      background: #25D366 !important;
+      color: #ffffff !important;
+
+      border: 0 !important;
+      box-shadow: 0 -6px 22px rgba(0,0,0,.10) !important;
+
+      font-weight: 800 !important;
+      text-decoration: none !important;
+    }
+
+    .mobile-contact.whatsapp-contact:hover {
+      background: #1fbd5a !important;
+    }
+
+    .mobile-contact .whatsapp-icon {
+      width: 24px !important;
+      height: 24px !important;
+      flex-shrink: 0 !important;
+    }
+
+
+    /* =====================================================
+       REMOVE QUALQUER SETA DECORATIVA RESTANTE VIA CSS
+    ====================================================== */
+
+    .text-link::after,
+    .footer-social::after,
+    .professional-instagram::after,
+    .treatment-card a::after,
+    .header-cta::after,
+    .mobile-contact::after {
+      content: none !important;
+      display: none !important;
+    }
+
+
+    /* =====================================================
+       RODAPÉ NO CELULAR
+    ====================================================== */
+
+    @media (max-width: 700px) {
+
+      .site-footer .footer-pro {
+        padding: 36px 20px 30px !important;
+      }
+
+      .site-footer .footer-main {
+        grid-template-columns: 1fr !important;
+        gap: 28px !important;
+        padding-bottom: 28px !important;
+      }
+
+      .site-footer .footer-logo-img {
+        height: 62px !important;
+        max-width: 260px !important;
+      }
+
+      .site-footer .footer-info-area {
+        gap: 18px !important;
+      }
+
+      .site-footer .footer-bottom {
+        grid-template-columns: 1fr !important;
+        gap: 13px !important;
+        align-items: start !important;
+      }
+
+      .site-footer .footer-top-link {
+        width: fit-content !important;
+      }
+    }
+
+
+    /* =====================================================
+       DEPOIMENTOS DO INSTAGRAM
+    ====================================================== */
+
+    .testimonials-section {
+      background: #f7f9fb !important;
+      overflow: hidden;
+    }
+
+    .testimonials-heading {
+      margin-bottom: 34px !important;
+    }
+
+    .instagram-carousel {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      padding-bottom: 52px;
+    }
+
+    .instagram-track {
+      display: flex;
+      width: 100%;
+      transition: transform .55s cubic-bezier(.22,.61,.36,1);
+      will-change: transform;
+      touch-action: pan-y;
+    }
+
+    .instagram-slide {
+      flex: 0 0 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 0 12px;
+    }
+
+    .instagram-embed-wrap {
+      width: min(100%, 540px);
+      min-height: 520px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      margin-inline: auto;
+    }
+
+    .instagram-embed-wrap .instagram-media {
+      width: 100% !important;
+      max-width: 540px !important;
+      min-width: 0 !important;
+      margin: 0 auto !important;
+    }
+
+    .instagram-dots {
+      position: absolute;
+      left: 50%;
+      bottom: 8px;
+      transform: translateX(-50%);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+
+      padding: 7px 10px;
+      border-radius: 999px;
+
+      background: rgba(17,40,71,.10);
+    }
+
+    .instagram-dot {
+      width: 7px;
+      height: 7px;
+      padding: 0;
+      border: 0;
+      border-radius: 999px;
+      background: rgba(17,40,71,.28);
+      cursor: pointer;
+      transition: width .25s ease, background .25s ease;
+    }
+
+    .instagram-dot.active {
+      width: 24px;
+      background: #b8903b;
+    }
+
+
+    /* =====================================================
+       WHATSAPP LATERAL FIXO
+    ====================================================== */
+
+    .floating-whatsapp {
+      position: fixed;
+      z-index: 3000;
+
+      right: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+
+      min-height: 52px;
+      padding: 0 16px;
+
+      border-radius: 999px;
+
+      background: #25D366;
+      color: #fff;
+
+      box-shadow: 0 12px 32px rgba(0,0,0,.18);
+
+      font-size: 14px;
+      font-weight: 800;
+      text-decoration: none;
+
+      transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        background .2s ease;
+    }
+
+    .floating-whatsapp:hover {
+      background: #1fbd5a;
+      transform: translateY(-50%) scale(1.03);
+      box-shadow: 0 14px 36px rgba(0,0,0,.22);
+    }
+
+    .floating-whatsapp-icon {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 700px) {
+      .instagram-carousel {
+        padding-bottom: 46px;
+      }
+
+      .instagram-slide {
+        padding: 0 8px;
+      }
+
+      .instagram-embed-wrap {
+        width: 100%;
+        min-height: 480px;
+      }
+
+      .floating-whatsapp {
+        right: 12px;
+        top: auto;
+        bottom: 18px;
+        transform: none;
+
+        width: 56px;
+        height: 56px;
+        min-height: 56px;
+        padding: 0;
+
+        border-radius: 50%;
+      }
+
+      .floating-whatsapp:hover {
+        transform: none;
+      }
+
+      .floating-whatsapp span {
+        display: none;
+      }
+
+      .floating-whatsapp-icon {
+        width: 27px;
+        height: 27px;
+      }
+    }
+
+
+    /* =====================================================
+       RODAPÉ RESUMIDO COM CONTATO
+    ====================================================== */
+
+    .site-footer .footer-contact-area {
+      display: grid !important;
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      gap: 34px !important;
+      min-width: 0 !important;
+    }
+
+    .site-footer .footer-contact-block {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      gap: 9px !important;
+      min-width: 0 !important;
+    }
+
+    .site-footer .footer-contact-block strong {
+      color: #e9c774 !important;
+      font-size: 13px !important;
+      font-weight: 700 !important;
+      letter-spacing: 1px !important;
+      text-transform: uppercase !important;
+    }
+
+    .site-footer .footer-contact-block a,
+    .site-footer .footer-contact-block span {
+      color: #b8c5d3 !important;
+      font-size: 14px !important;
+      line-height: 1.65 !important;
+      text-decoration: none !important;
+    }
+
+    .site-footer .footer-contact-block a:hover {
+      color: #ffffff !important;
+    }
+
+    .site-footer .footer-registration {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      gap: 8px 18px !important;
+
+      margin: 0 0 24px !important;
+      padding: 20px 0 !important;
+
+      border-top: 1px solid rgba(255,255,255,.08) !important;
+      border-bottom: 1px solid rgba(255,255,255,.08) !important;
+
+      color: #9fb0c3 !important;
+      font-size: 13px !important;
+    }
+
+    @media (max-width: 700px) {
+      .site-footer .footer-contact-area {
+        grid-template-columns: 1fr !important;
+        gap: 22px !important;
+      }
+
+      .site-footer .footer-registration {
+        flex-direction: column !important;
+      }
+    }
+
+
+    /* =====================================================
+       PERGUNTAS FREQUENTES
+    ====================================================== */
+
+    .faq-section {
+      background: #ffffff !important;
+    }
+
+    .faq-heading {
+      margin-bottom: 34px !important;
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 12px;
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border: 1px solid #dfe5ea;
+      border-radius: 14px;
+      background: #fff;
+      overflow: hidden;
+      transition:
+        border-color .2s ease,
+        box-shadow .2s ease;
+    }
+
+    .faq-item[open] {
+      border-color: rgba(184, 144, 59, .45);
+      box-shadow: 0 12px 28px rgba(17, 40, 71, .06);
+    }
+
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+
+      padding: 20px 22px;
+
+      list-style: none;
+      cursor: pointer;
+
+      color: #172c47;
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-symbol {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      flex: 0 0 auto;
+
+      width: 34px;
+      height: 34px;
+
+      border-radius: 50%;
+      background: #f5eedf;
+      color: #8a6c2d;
+
+      font-size: 23px;
+      font-weight: 400;
+      line-height: 1;
+
+      transition: transform .2s ease;
+    }
+
+    .faq-item[open] .faq-symbol {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      padding: 0 22px 22px;
+    }
+
+    .faq-answer p {
+      margin: 0;
+      color: #617085;
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    @media (max-width: 700px) {
+      .faq-heading {
+        margin-bottom: 26px !important;
+      }
+
+      .faq-list {
+        gap: 10px;
+      }
+
+      .faq-item summary {
+        padding: 17px 16px;
+        font-size: 15px;
+        gap: 12px;
+      }
+
+      .faq-symbol {
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+      }
+
+      .faq-answer {
+        padding: 0 16px 18px;
+      }
+
+      .faq-answer p {
+        font-size: 14px;
+        line-height: 1.7;
+      }
+    }
+
+
+    /* =====================================================
+       HERO — ODONTOLOGIA & ESTÉTICA
+       Fundo branco igual à navegação
+    ====================================================== */
+
+    .clinic-hero {
+      position: relative;
+      overflow: hidden;
+      background: #ffffff;
+      border-bottom: 1px solid rgba(17,40,71,.06);
+    }
+
+    .clinic-hero-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(440px, .95fr);
+      align-items: center;
+      gap: 54px;
+
+      min-height: 610px;
+      padding-top: 54px;
+      padding-bottom: 0;
+    }
+
+    .clinic-hero-copy {
+      position: relative;
+      z-index: 2;
+      padding-bottom: 54px;
+    }
+
+    .clinic-hero-copy .eyebrow {
+      margin-bottom: 20px;
+      color: #8a6c2d;
+    }
+
+    .clinic-hero-copy h1 {
+      max-width: 760px;
+      margin: 0;
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(48px, 5.3vw, 82px);
+      font-weight: 400;
+      line-height: .98;
+      letter-spacing: -2.6px;
+
+      color: #172c47;
+    }
+
+    .clinic-hero-copy h1 em {
+      display: block;
+      margin-top: 8px;
+
+      color: #a88135;
+      font-weight: 400;
+    }
+
+    .clinic-hero-description {
+      max-width: 650px;
+      margin: 28px 0 0;
+
+      color: #617085;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .clinic-hero-highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+
+      margin-top: 26px;
+    }
+
+    .clinic-hero-highlights span {
+      display: inline-flex;
+      align-items: center;
+
+      min-height: 38px;
+      padding: 0 14px;
+
+      border: 1px solid rgba(168,129,53,.30);
+      border-radius: 999px;
+
+      background: #fffaf0;
+      color: #7d6229;
+
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .2px;
+    }
+
+    .clinic-hero-actions {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+
+      margin-top: 30px;
+    }
+
+    .clinic-hero-actions .button {
+      min-height: 52px;
+    }
+
+    .clinic-hero-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      min-height: 52px;
+      padding: 0 20px;
+
+      border: 1px solid #d7dde3;
+      border-radius: 10px;
+
+      background: #ffffff;
+      color: #172c47;
+
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+
+      transition: border-color .2s ease, background .2s ease;
+    }
+
+    .clinic-hero-whatsapp:hover {
+      border-color: #b8903b;
+      background: #fffaf0;
+    }
+
+    .clinic-hero-visual {
+      position: relative;
+      align-self: stretch;
+
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+
+      min-height: 610px;
+    }
+
+    .clinic-hero-shape {
+      position: absolute;
+      z-index: 0;
+
+      width: 470px;
+      height: 470px;
+
+      right: 2%;
+      bottom: 42px;
+
+      border-radius: 50% 50% 42% 58% / 56% 44% 56% 44%;
+
+      background:
+        radial-gradient(
+          circle at 35% 28%,
+          #fffaf0 0%,
+          #f6edd9 48%,
+          #ead7ac 100%
+        );
+
+      opacity: .88;
+    }
+
+    .clinic-hero-team {
+      position: relative;
+      z-index: 1;
+
+      display: block;
+      width: min(100%, 650px);
+      height: auto;
+      max-height: 610px;
+
+      object-fit: contain;
+      object-position: center bottom;
+
+      filter: drop-shadow(0 22px 32px rgba(17,40,71,.10));
+    }
+
+    /* Tablet */
+    @media (max-width: 1050px) {
+      .clinic-hero-inner {
+        grid-template-columns: 1.05fr .95fr;
+        gap: 28px;
+        min-height: 540px;
+      }
+
+      .clinic-hero-copy h1 {
+        font-size: clamp(44px, 6vw, 64px);
+      }
+
+      .clinic-hero-visual {
+        min-height: 540px;
+      }
+
+      .clinic-hero-shape {
+        width: 390px;
+        height: 390px;
+      }
+
+      .clinic-hero-team {
+        max-height: 540px;
+      }
+    }
+
+    /* Celular */
+    @media (max-width: 760px) {
+      .clinic-hero-inner {
+        grid-template-columns: 1fr;
+        gap: 12px;
+
+        min-height: 0;
+        padding-top: 38px;
+      }
+
+      .clinic-hero-copy {
+        padding-bottom: 6px;
+      }
+
+      .clinic-hero-copy h1 {
+        font-size: clamp(42px, 12vw, 60px);
+        line-height: 1;
+        letter-spacing: -1.6px;
+      }
+
+      .clinic-hero-description {
+        margin-top: 22px;
+        font-size: 16px;
+        line-height: 1.65;
+      }
+
+      .clinic-hero-highlights {
+        margin-top: 22px;
+      }
+
+      .clinic-hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+        margin-top: 24px;
+      }
+
+      .clinic-hero-actions .button,
+      .clinic-hero-whatsapp {
+        width: 100%;
+      }
+
+      .clinic-hero-visual {
+        min-height: 390px;
+        margin-top: 6px;
+      }
+
+      .clinic-hero-shape {
+        width: 330px;
+        height: 330px;
+
+        right: 50%;
+        bottom: 20px;
+        transform: translateX(50%);
+      }
+
+      .clinic-hero-team {
+        width: min(100%, 470px);
+        max-height: 405px;
+      }
+    }
+
+    @media (max-width: 440px) {
+      .clinic-hero-inner {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      .clinic-hero-copy h1 {
+        font-size: 43px;
+      }
+
+      .clinic-hero-visual {
+        min-height: 345px;
+      }
+
+      .clinic-hero-shape {
+        width: 285px;
+        height: 285px;
+      }
+
+      .clinic-hero-team {
+        max-height: 360px;
+      }
+    }
+
+
+    /* =====================================================
+       MOBILE — FOTO DA EQUIPE COMO FUNDO DO HERO
+    ====================================================== */
+
+    @media (max-width: 760px) {
+
+      .clinic-hero {
+        position: relative !important;
+        background: #ffffff !important;
+      }
+
+      .clinic-hero-inner {
+        position: relative !important;
+        display: block !important;
+
+        min-height: 760px !important;
+
+        padding: 0 !important;
+        overflow: hidden !important;
+
+        background:
+          linear-gradient(
+            to bottom,
+            rgba(255,255,255,.96) 0%,
+            rgba(255,255,255,.92) 34%,
+            rgba(255,255,255,.78) 58%,
+            rgba(255,255,255,.18) 100%
+          ),
+          url("equipe-lamont.png") center bottom / contain no-repeat !important;
+      }
+
+      .clinic-hero-copy {
+        position: relative !important;
+        z-index: 3 !important;
+
+        padding:
+          38px
+          20px
+          260px
+          20px !important;
+
+        background: transparent !important;
+      }
+
+      .clinic-hero-copy h1,
+      .clinic-hero-copy p,
+      .clinic-hero-copy .eyebrow {
+        position: relative !important;
+        z-index: 4 !important;
+      }
+
+      .clinic-hero-description {
+        max-width: 100% !important;
+      }
+
+      .clinic-hero-highlights,
+      .clinic-hero-actions {
+        position: relative !important;
+        z-index: 4 !important;
+      }
+
+      /* A foto não aparece mais como bloco separado */
+      .clinic-hero-visual {
+        display: none !important;
+      }
+
+      .clinic-hero-actions {
+        flex-direction: column !important;
+        align-items: stretch !important;
+      }
+
+      .clinic-hero-actions .button,
+      .clinic-hero-whatsapp {
+        width: 100% !important;
+      }
+
+      .clinic-hero-whatsapp {
+        background: rgba(255,255,255,.94) !important;
+      }
+    }
+
+    @media (max-width: 440px) {
+
+      .clinic-hero-inner {
+        min-height: 735px !important;
+
+        background:
+          linear-gradient(
+            to bottom,
+            rgba(255,255,255,.97) 0%,
+            rgba(255,255,255,.94) 38%,
+            rgba(255,255,255,.78) 62%,
+            rgba(255,255,255,.12) 100%
+          ),
+          url("equipe-lamont.png") center bottom / 100% auto no-repeat !important;
+      }
+
+      .clinic-hero-copy {
+        padding:
+          34px
+          18px
+          235px
+          18px !important;
+      }
+
+      .clinic-hero-copy h1 {
+        font-size: 42px !important;
+      }
+    }
+
+
+    /* =====================================================
+       TESTE — HERO AZUL, NAV CONTINUA BRANCA
+       Cor baseada no rodapé
+    ====================================================== */
+
+    .site-header {
+      background: #ffffff !important;
+    }
+
+    .clinic-hero {
+      background: #0d2440 !important;
+      border-bottom: 0 !important;
+    }
+
+    .clinic-hero-inner {
+      background: #0d2440 !important;
+    }
+
+    .clinic-hero-copy .eyebrow {
+      color: #e9c774 !important;
+    }
+
+    .clinic-hero-copy h1 {
+      color: #ffffff !important;
+    }
+
+    .clinic-hero-copy h1 em {
+      color: #e9c774 !important;
+    }
+
+    .clinic-hero-description {
+      color: #d6e0ea !important;
+    }
+
+    .clinic-hero-highlights span {
+      background: rgba(255,255,255,.07) !important;
+      border-color: rgba(233,199,116,.42) !important;
+      color: #f1d88f !important;
+    }
+
+    .clinic-hero-actions .button-gold {
+      background: #e9c774 !important;
+      color: #112847 !important;
+      border-color: #e9c774 !important;
+    }
+
+    .clinic-hero-actions .button-gold:hover {
+      background: #f1d88f !important;
+      border-color: #f1d88f !important;
+    }
+
+    .clinic-hero-whatsapp {
+      background: transparent !important;
+      color: #ffffff !important;
+      border-color: rgba(255,255,255,.35) !important;
+    }
+
+    .clinic-hero-whatsapp:hover {
+      background: rgba(255,255,255,.08) !important;
+      border-color: rgba(255,255,255,.55) !important;
+    }
+
+    .clinic-hero-shape {
+      background:
+        radial-gradient(
+          circle at 35% 28%,
+          rgba(233,199,116,.26) 0%,
+          rgba(184,144,59,.18) 50%,
+          rgba(17,40,71,.08) 100%
+        ) !important;
+      opacity: 1 !important;
+    }
+
+    /* MOBILE — mantém o fundo azul mesmo com a foto ao fundo */
+    @media (max-width: 760px) {
+      .clinic-hero {
+        background: #0d2440 !important;
+      }
+
+      .clinic-hero-inner {
+        background:
+          linear-gradient(
+            to bottom,
+            rgba(13,36,64,.96) 0%,
+            rgba(13,36,64,.94) 30%,
+            rgba(13,36,64,.82) 58%,
+            rgba(13,36,64,.38) 100%
+          ),
+          url("equipe-lamont.png") center bottom / contain no-repeat !important;
+      }
+
+      .clinic-hero-copy h1 {
+        color: #ffffff !important;
+      }
+
+      .clinic-hero-description {
+        color: #d6e0ea !important;
+      }
+
+      .clinic-hero-whatsapp {
+        background: rgba(255,255,255,.06) !important;
+        color: #ffffff !important;
+        border-color: rgba(255,255,255,.35) !important;
+      }
+    }
+
+    @media (max-width: 440px) {
+      .clinic-hero-inner {
+        background:
+          linear-gradient(
+            to bottom,
+            rgba(13,36,64,.97) 0%,
+            rgba(13,36,64,.94) 34%,
+            rgba(13,36,64,.80) 60%,
+            rgba(13,36,64,.30) 100%
+          ),
+          url("equipe-lamont.png") center bottom / 100% auto no-repeat !important;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <a class="skip-link" href="#conteudo">
+    Ir para o conteúdo
+  </a>
+
+  <svg
+    class="icon-definitions"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+  >
+    <defs>
+
+      <symbol id="i-pin" viewBox="0 0 24 24">
+        <path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z"/>
+        <circle cx="12" cy="10" r="2.5"/>
+      </symbol>
+
+      <symbol id="i-heart" viewBox="0 0 24 24">
+        <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/>
+      </symbol>
+
+      <symbol id="i-tooth" viewBox="0 0 24 24">
+        <path d="M12 5c-2-1-4-2-6-1-3 1.5-2.5 5.5-1 9 1 2 1 7 3 7 1.5 0 1.3-6 4-6s2.5 6 4 6c2 0 2-5 3-7 1.5-3.5 2-7.5-1-9-2-1-4 0-6 1Z"/>
+      </symbol>
+
+      <symbol id="i-sparkles" viewBox="0 0 24 24">
+        <path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5L12 3ZM20 2v4m-2-2h4"/>
+      </symbol>
+
+      <symbol id="i-smile" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9"/>
+        <path d="M8 14s1.5 3 4 3 4-3 4-3M8 9h.01M16 9h.01"/>
+      </symbol>
+
+      <symbol id="i-check" viewBox="0 0 24 24">
+        <path d="m5 12 4 4L19 6"/>
+      </symbol>
+
+      <symbol id="i-instagram" viewBox="0 0 24 24">
+        <rect x="3" y="3" width="18" height="18" rx="5"/>
+        <circle cx="12" cy="12" r="4"/>
+        <path d="M17.5 6.5h.01"/>
+      </symbol>
+
+      <symbol id="i-chat" viewBox="0 0 24 24">
+        <path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5Z"/>
+        <path d="M8 11h8m-8 4h5"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <header class="site-header" id="inicio">
+    <div class="container header-inner">
+
+      <a href="#inicio" class="brand" aria-label="Clínica LaMont — início">
+        <img src="logo.png" alt="Clínica LaMont" class="nav-logo">
+      </a>
+
+      <nav
+        id="main-nav"
+        class="main-nav"
+        aria-label="Navegação principal"
+      >
+        <a href="#profissionais">Profissionais</a>
+        <a href="#tratamentos">Tratamentos</a>
+        <a href="#resultados">Antes e depois</a>
+        <a href="#contato">Contato</a>
+
+        <a
+          class="mobile-nav-cta"
+          href="https://wa.me/5524981829116?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20LaMont%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o."
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Agende sua avaliação
+        </a>
+      </nav>
+
+      <a
+        class="button button-outline header-cta"
+        href="https://wa.me/5524981829116?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20LaMont%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o."
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Agende sua avaliação
+
+        
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Abrir menu"
+        aria-controls="main-nav"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+
+    <!-- BANNER PRINCIPAL / CARROSSEL -->
+    
+    <!-- HERO ODONTOLOGIA & ESTÉTICA -->
+    <section class="clinic-hero" aria-labelledby="clinic-hero-title">
+      <div class="container clinic-hero-inner">
+
+        <div class="clinic-hero-copy">
+
+          <p class="eyebrow">ODONTOLOGIA & ESTÉTICA</p>
+
+          <h1 id="clinic-hero-title">
+            Cuidado completo para o seu
+            <em>sorriso e sua expressão.</em>
+          </h1>
+
+          <p class="clinic-hero-description">
+            Na LaMont, odontologia e estética caminham juntas para oferecer
+            um cuidado individual, natural e pensado em cada detalhe.
+          </p>
+
+          <div class="clinic-hero-highlights">
+            <span>Odontologia</span>
+            <span>Estética facial</span>
+            <span>Botox</span>
+            <span>Estética do sorriso</span>
+          </div>
+
+          <div class="clinic-hero-actions">
+            <a class="button button-gold" href="#tratamentos">
+              Conheça os tratamentos
+            </a>
+
+            <a
+              class="clinic-hero-whatsapp"
+              href="https://wa.me/5524981829116?text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20os%20tratamentos%20da%20LaMont."
+              target="_blank"
+              rel="noopener noreferrer"
+            >Agende sua consulta</a>
+          </div>
+
+        </div>
+
+        <div class="clinic-hero-visual">
+          <div class="clinic-hero-shape" aria-hidden="true"></div>
+
+          <img
+            src="equipe-lamont.png"
+            alt="Dr. Cainã Lachine e Dra. Júlia Monteiro Lachine"
+            class="clinic-hero-team"
+            fetchpriority="high"
+          >
+        </div>
+
+      </div>
+    </section>
+
+
+
+<div class="care-strip">
+      <div class="container strip-inner">
+
+        <span>
+          <svg class="icon" aria-hidden="true">
+            <use href="#i-heart"/>
+          </svg>
+          Um olhar para você
+        </span>
+
+        <span>
+          <svg class="icon" aria-hidden="true">
+            <use href="#i-tooth"/>
+          </svg>
+          Saúde e estética juntas
+        </span>
+
+        <span>
+          <svg class="icon" aria-hidden="true">
+            <use href="#i-smile"/>
+          </svg>
+          Sua melhor versão, com naturalidade
+        </span>
+
+      </div>
+    </div>
+
+    <!-- PROFISSIONAIS -->
+
+    <section
+      class="section team-section"
+      id="profissionais"
+      aria-labelledby="team-title"
+    >
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div>
+            <p class="eyebrow">CONHEÇA NOSSOS PROFISSIONAIS</p>
+
+            <h2 id="team-title">
+              Por trás de cada sorriso,<br>
+              <em>pessoas que cuidam.</em>
+            </h2>
+          </div>
+
+          <p>
+            Conheça o Dr. Cainã e a Dra. Júlia.
+            Acompanhe seus perfis e descubra mais sobre
+            o trabalho de cada um.
+          </p>
+
+        </div>
+
+        <div class="team-grid">
+
+          <!-- DR. CAINÃ -->
+
+          <article class="professional-card" aria-labelledby="caina-name">
+
+            <div class="professional-photo">
+
+              <!-- Altere o src abaixo para trocar a foto do Dr. Cainã. -->
+              <img
+                src="assets/profissionais/dr-caina.jpg"
+                alt="Dr. Cainã Lachine, cirurgião-dentista e responsável técnico da Clínica LaMont"
+                loading="lazy"
+                decoding="async"
+                onload="this.hidden = false; this.nextElementSibling.hidden = true;"
+                onerror="this.hidden = true; this.nextElementSibling.hidden = false;"
+              >
+
+              <span class="photo-fallback" aria-hidden="true" hidden>
+                CL
+              </span>
+
+            </div>
+
+            <div class="professional-content">
+
+              <span class="professional-badge">
+                RESPONSÁVEL TÉCNICO
+              </span>
+
+              <h3 id="caina-name">
+                Dr. Cainã Lachine
+              </h3>
+
+              <p class="professional-field">
+                Cirurgião-dentista
+              </p>
+
+              <p class="professional-register">
+                CRO-RJ 49210
+              </p>
+
+              <a
+                class="professional-instagram"
+                href="https://www.instagram.com/dr.cainalachinee/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg class="icon" aria-hidden="true">
+                  <use href="#i-instagram"/>
+                </svg>
+
+                <span>@dr.cainalachinee</span>
+
+                
+              </a>
+
+            </div>
+
+          </article>
+
+          <!-- DRA. JÚLIA -->
+
+          <article class="professional-card" aria-labelledby="julia-name">
+
+            <div class="professional-photo professional-photo-light">
+
+              <!-- Altere o src abaixo para trocar a foto da Dra. Júlia. -->
+              <img
+                src="assets/profissionais/dra-julia.jpg"
+                alt="Dra. Júlia Monteiro Lachine, profissional da Clínica LaMont"
+                loading="lazy"
+                decoding="async"
+                onload="this.hidden = false; this.nextElementSibling.hidden = true;"
+                onerror="this.hidden = true; this.nextElementSibling.hidden = false;"
+              >
+
+              <span class="photo-fallback" aria-hidden="true" hidden>
+                JM
+              </span>
+
+            </div>
+
+            <div class="professional-content">
+
+              <span class="professional-badge">
+                ESTÉTICA FACIAL
+              </span>
+
+              <h3 id="julia-name">
+                Dra. Júlia Monteiro Lachine
+              </h3>
+
+              <p class="professional-field">
+                Harmonização facial
+              </p>
+
+              <p
+                class="professional-register"
+                data-professional-register="julia"
+                hidden
+              ></p>
+
+              <a
+                class="professional-instagram"
+                href="https://www.instagram.com/drajuliamonteirolachine/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg class="icon" aria-hidden="true">
+                  <use href="#i-instagram"/>
+                </svg>
+
+                <span>@drajuliamonteirolachine</span>
+
+                
+              </a>
+
+            </div>
+
+          </article>
+
+        </div>
+
+        <p class="team-registration">
+          Clínica LaMont
+          <span aria-hidden="true">·</span>
+          EPAO 7059
+        </p>
+
+      </div>
+    </section>
+
+    <!-- TRATAMENTOS -->
+
+    <section
+      class="section treatments"
+      id="tratamentos"
+      aria-labelledby="treatments-title"
+    >
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div>
+            <p class="eyebrow">ODONTOLOGIA & ESTÉTICA</p>
+
+            <h2 id="treatments-title">
+              Seu sorriso, em<br>
+              <em>cada detalhe.</em>
+            </h2>
+          </div>
+
+          <p>
+            Cada pessoa tem uma história.<br>
+            O primeiro passo é entender o que você precisa
+            e conversar sobre as possibilidades para o seu cuidado.
+          </p>
+
+        </div>
+
+        <div class="treatment-grid">
+
+          <article class="treatment-card">
+
+            <div class="card-top">
+
+              <span class="service-icon">
+                <svg class="icon" aria-hidden="true">
+                  <use href="#i-tooth"/>
+                </svg>
+              </span>
+
+              <span class="service-number">01</span>
+
+            </div>
+
+            <h3>Implantes dentários</h3>
+
+            <p>
+              Um caminho para recuperar o sorriso.
+              Converse com a equipe sobre a avaliação
+              e o planejamento do seu caso.
+            </p>
+
+            <a
+              href="https://wa.me/5524981829116?text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20implantes%20dent%C3%A1rios%20na%20LaMont."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Conversar sobre implantes
+
+              
+            </a>
+
+          </article>
+
+          <article class="treatment-card">
+
+            <div class="card-top">
+
+              <span class="service-icon">
+                <svg class="icon" aria-hidden="true">
+                  <use href="#i-sparkles"/>
+                </svg>
+              </span>
+
+              <span class="service-number">02</span>
+
+            </div>
+
+            <h3>Estética do sorriso</h3>
+
+            <p>
+              Valorize o seu sorriso com naturalidade.
+              Conheça as possibilidades de clareamento
+              e cuidado estético dos dentes.
+            </p>
+
+            <a
+              href="https://wa.me/5524981829116?text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20clareamento%20e%20est%C3%A9tica%20do%20sorriso%20na%20LaMont."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Conversar sobre meu sorriso
+
+              
+            </a>
+
+          </article>
+
+          <article class="treatment-card">
+
+            <div class="card-top">
+
+              <span class="service-icon">
+                <svg class="icon" aria-hidden="true">
+                  <use href="#i-smile"/>
+                </svg>
+              </span>
+
+              <span class="service-number">03</span>
+
+            </div>
+
+            <h3>Estética facial</h3>
+
+            <p>
+              Um olhar para a sua expressão e individualidade.
+              Descubra quais cuidados podem fazer sentido para você.
+            </p>
+
+            <a
+              href="https://wa.me/5524981829116?text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20est%C3%A9tica%20facial%20na%20LaMont."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Conversar sobre estética facial
+
+              
+            </a>
+
+          </article>
+
+        </div>
+
+        <p class="treatment-note">
+          O cuidado começa com uma avaliação individual.
+          A indicação de cada tratamento depende das suas necessidades.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- ANTES E DEPOIS — CONFIGURE AS FOTOS EM conteudo.js -->
+
+    <section
+      class="section results-section"
+      id="resultados"
+      aria-labelledby="results-title"
+    >
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div>
+            <p class="eyebrow">ANTES & DEPOIS</p>
+
+            <h2 id="results-title">
+              Cada resultado tem<br>
+              <em>uma história.</em>
+            </h2>
+          </div>
+
+          <p>
+            Conheça registros de antes e depois de procedimentos
+            odontológicos e de estética facial realizados na LaMont.
+          </p>
+
+        </div>
+
+        <div class="results-grid" id="results-gallery"></div>
+
+        <div class="results-empty" id="results-empty">
+
+          <div class="empty-comparison" aria-hidden="true">
+
+            <div>
+              <span class="comparison-tag">ANTES</span>
+              <span class="empty-word">Antes.</span>
+            </div>
+
+            <div>
+              <span class="comparison-tag">DEPOIS</span>
+              <span class="empty-word">Depois.</span>
+            </div>
+
+          </div>
+
+          <div class="results-empty-caption">
+
+            <svg class="icon" aria-hidden="true">
+              <use href="#i-sparkles"/>
+            </svg>
+
+            <p>Novos registros em breve.</p>
+
+          </div>
+
+        </div>
+
+        <p class="results-note">
+          Cada pessoa tem características e necessidades próprias.
+          Os resultados são individuais.
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- DEPOIMENTOS / INSTAGRAM -->
+    <section
+      class="section testimonials-section"
+      id="depoimentos"
+      aria-labelledby="testimonials-title"
+    >
+      <div class="container">
+
+        <div class="section-heading testimonials-heading">
+
+          <div>
+            <p class="eyebrow">O QUE NOSSOS PACIENTES DIZEM</p>
+
+            <h2 id="testimonials-title">
+              Experiências que<br>
+              <em>falam por si.</em>
+            </h2>
+          </div>
+
+          <p>
+            Escolha o depoimento que deseja ver e deslize para navegar entre os relatos.
+          </p>
+
+        </div>
+
+        <div
+          class="instagram-carousel"
+          id="instagram-carousel"
+          aria-roledescription="carrossel"
+          aria-label="Depoimentos de pacientes no Instagram"
+        >
+
+          <div class="instagram-track" id="instagram-track">
+
+            <article class="instagram-slide">
+              <div class="instagram-embed-wrap">
+                <blockquote
+                  class="instagram-media"
+                  data-instgrm-permalink="https://www.instagram.com/p/DcPFN60KCcW/"
+                  data-instgrm-version="14"
+                ></blockquote>
+              </div>
+            </article>
+
+            <article class="instagram-slide">
+              <div class="instagram-embed-wrap">
+                <blockquote
+                  class="instagram-media"
+                  data-instgrm-permalink="https://www.instagram.com/p/DbTjsP-pyep/"
+                  data-instgrm-version="14"
+                ></blockquote>
+              </div>
+            </article>
+
+            <article class="instagram-slide">
+              <div class="instagram-embed-wrap">
+                <blockquote
+                  class="instagram-media"
+                  data-instgrm-permalink="https://www.instagram.com/p/DbTdquRtzk1/"
+                  data-instgrm-version="14"
+                ></blockquote>
+              </div>
+            </article>
+
+            <article class="instagram-slide">
+              <div class="instagram-embed-wrap">
+                <blockquote
+                  class="instagram-media"
+                  data-instgrm-permalink="https://www.instagram.com/p/DTEfj51jYuX/"
+                  data-instgrm-version="14"
+                ></blockquote>
+              </div>
+            </article>
+
+          </div>
+
+          <div class="instagram-dots" id="instagram-dots" aria-label="Selecionar depoimento">
+            <button class="instagram-dot active" type="button" aria-label="Depoimento 1"></button>
+            <button class="instagram-dot" type="button" aria-label="Depoimento 2"></button>
+            <button class="instagram-dot" type="button" aria-label="Depoimento 3"></button>
+            <button class="instagram-dot" type="button" aria-label="Depoimento 4"></button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- A CLÍNICA -->
+
+    
+    <!-- PERGUNTAS FREQUENTES -->
+    <section
+      class="section faq-section"
+      id="faq"
+      aria-labelledby="faq-title"
+    >
+      <div class="container">
+
+        <div class="section-heading faq-heading">
+          <div>
+            <p class="eyebrow">PERGUNTAS FREQUENTES</p>
+
+            <h2 id="faq-title">
+              Tire suas dúvidas<br>
+              <em>antes da avaliação.</em>
+            </h2>
+          </div>
+
+          <p>
+            Reunimos algumas das dúvidas mais comuns para ajudar você
+            a conhecer melhor os atendimentos da LaMont.
+          </p>
+        </div>
+
+        <div class="faq-list">
+
+          <details class="faq-item">
+            <summary>
+              <span>Como faço para agendar uma avaliação?</span>
+              <span class="faq-symbol" aria-hidden="true">+</span>
+            </summary>
+
+            <div class="faq-answer">
+              <p>
+                Você pode falar diretamente com a equipe pelo WhatsApp
+                e combinar o melhor dia e horário para a sua avaliação.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Quais procedimentos são realizados na LaMont?</span>
+              <span class="faq-symbol" aria-hidden="true">+</span>
+            </summary>
+
+            <div class="faq-answer">
+              <p>
+                A clínica reúne atendimentos de odontologia e estética,
+                incluindo implantes dentários, estética do sorriso,
+                resinas, estética facial e Botox. A indicação depende
+                da avaliação de cada caso.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Quem realiza os procedimentos?</span>
+              <span class="faq-symbol" aria-hidden="true">+</span>
+            </summary>
+
+            <div class="faq-answer">
+              <p>
+                O Dr. Cainã Lachine atua na área odontológica e é o
+                responsável técnico da clínica, CRO-RJ 49210. A Dra.
+                Júlia Monteiro Lachine atua em estética facial e Botox.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Como funciona a primeira avaliação?</span>
+              <span class="faq-symbol" aria-hidden="true">+</span>
+            </summary>
+
+            <div class="faq-answer">
+              <p>
+                A avaliação é o momento para entender suas necessidades,
+                conversar sobre suas expectativas e verificar quais
+                possibilidades de cuidado fazem sentido para o seu caso.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Os resultados são iguais para todas as pessoas?</span>
+              <span class="faq-symbol" aria-hidden="true">+</span>
+            </summary>
+
+            <div class="faq-answer">
+              <p>
+                Não. Cada pessoa possui características e necessidades
+                próprias. Por isso, os resultados e a indicação de cada
+                tratamento são individuais.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Onde fica a Clínica LaMont?</span>
+              <span class="faq-symbol" aria-hidden="true">+</span>
+            </summary>
+
+            <div class="faq-answer">
+              <p>
+                A Clínica LaMont fica na Av. Roberto Silveira, 311,
+                Centro, Miguel Pereira - RJ, CEP 26900-000.
+              </p>
+            </div>
+          </details>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- CONTATO -->
+
+    
+
+
+
+  </main>
+
+  <footer class="site-footer" id="contato">
+    <div class="container footer-pro">
+
+      <div class="footer-main">
+
+        <div class="footer-brand-area">
+          <a
+            href="#inicio"
+            class="footer-logo-link"
+            aria-label="Clínica LaMont — início"
+          >
+            <img
+              src="logo.png"
+              alt="Clínica LaMont"
+              class="footer-logo-img"
+            >
+          </a>
+
+          <p class="footer-slogan">
+            Odontologia e estética com cuidado, precisão e naturalidade.
+          </p>
+        </div>
+
+        <div class="footer-contact-area">
+
+          <div class="footer-contact-block">
+            <strong>Contato</strong>
+
+            <a
+              href="https://wa.me/5524981829116?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20LaMont."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              WhatsApp: (24) 98182-9116
+            </a>
+
+            <a
+              href="https://www.instagram.com/clinicalamont/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Instagram: @clinicalamont
+            </a>
+          </div>
+
+          <div class="footer-contact-block">
+            <strong>Endereço</strong>
+
+            <span>
+              Av. Roberto Silveira, 311<br>
+              Centro · Miguel Pereira, RJ<br>
+              CEP 26900-000
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="footer-registration">
+        <span>Clínica LaMont · EPAO 7059</span>
+        <span>RT: Dr. Cainã Lachine · CRO-RJ 49210</span>
+      </div>
+
+      <div class="footer-bottom">
+
+        <span>
+          © <span id="year">2026</span>
+          Clínica LaMont. Todos os direitos reservados.
+        </span>
+
+        <a
+          class="footer-developer"
+          href="https://www.instagram.com/caio_henp/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Desenvolvido por <strong>FluxoSystem</strong>
+        </a>
+
+        <a href="#inicio" class="footer-top-link">
+          Voltar ao topo
+        </a>
+
+      </div>
+
+    </div>
+  </footer>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const gallery = document.getElementById("results-gallery");
+
+      if (!gallery) return;
+
+      function identificarProfissionais() {
+        const cards = Array.from(gallery.children);
+
+        cards.forEach((card, index) => {
+          const titulo = card.querySelector("h3, h4, .result-title, .comparison-title");
+          if (!titulo) return;
+
+          const texto = titulo.textContent.trim().toLowerCase();
+
+          let profissional = "";
+          let registro = "";
+
+          if (texto.includes("botox")) {
+            profissional = "Dra. Júlia Monteiro Lachine";
+            registro = "Botox · Estética facial";
+          } else if (
+            texto.includes("resina") ||
+            texto.includes("caso 01") ||
+            texto.includes("caso 1") ||
+            index === 0
+          ) {
+            titulo.textContent = "Resinas";
+            profissional = "Dr. Cainã Lachine";
+            registro = "CRO-RJ 49210";
+          }
+
+          if (!profissional) return;
+
+          let info = card.querySelector(".result-professional");
+
+          if (!info) {
+            info = document.createElement("p");
+            info.className = "result-professional";
+            titulo.insertAdjacentElement("afterend", info);
+          }
+
+          info.innerHTML =
+            "<strong>" + profissional + "</strong><br>" + registro;
+        });
+      }
+
+      identificarProfissionais();
+
+      const observer = new MutationObserver(identificarProfissionais);
+
+      observer.observe(gallery, {
+        childList: true,
+        subtree: true
+      });
+    });
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const carousel = document.getElementById("banner-carousel");
+      const track = document.getElementById("banner-track");
+      const dots = Array.from(document.querySelectorAll(".banner-dot"));
+      if (!carousel || !track || !dots.length) return;
+      const slides = Array.from(track.querySelectorAll(".banner-slide"));
+      const mobileQuery = window.matchMedia("(max-width: 900px)");
+      let current = 0, autoplay = null, touchStartX = 0, touchEndX = 0;
+      function showSlide(index) {
+        if (!mobileQuery.matches) { track.style.transform = "translate3d(0,0,0)"; return; }
+        current = (index + slides.length) % slides.length;
+        track.style.transform = "translate3d(-" + (current * 100) + "%,0,0)";
+        dots.forEach(function (dot, i) { dot.classList.toggle("active", i === current); dot.setAttribute("aria-current", i === current ? "true" : "false"); });
+      }
+      function nextSlide(){ showSlide(current + 1); }
+      function stopAutoplay(){ if (autoplay){ clearInterval(autoplay); autoplay = null; } }
+      function startAutoplay(){ stopAutoplay(); if (!mobileQuery.matches) return; autoplay = setInterval(nextSlide, 4500); }
+      dots.forEach(function(dot,index){ dot.addEventListener("click", function(){ showSlide(index); startAutoplay(); }); });
+      carousel.addEventListener("touchstart", function(e){ if(!mobileQuery.matches) return; touchStartX=e.changedTouches[0].clientX; stopAutoplay(); }, {passive:true});
+      carousel.addEventListener("touchend", function(e){ if(!mobileQuery.matches) return; touchEndX=e.changedTouches[0].clientX; const d=touchStartX-touchEndX; if(Math.abs(d)>45){ showSlide(d>0 ? current+1 : current-1); } startAutoplay(); }, {passive:true});
+      document.addEventListener("visibilitychange", function(){ if(document.hidden) stopAutoplay(); else startAutoplay(); });
+      function handleResponsiveCarousel(){ if(mobileQuery.matches){ showSlide(current); startAutoplay(); } else { stopAutoplay(); current=0; showSlide(0); } }
+      if(typeof mobileQuery.addEventListener === "function") mobileQuery.addEventListener("change", handleResponsiveCarousel); else if(typeof mobileQuery.addListener === "function") mobileQuery.addListener(handleResponsiveCarousel);
+      handleResponsiveCarousel();
+    });
+  </script>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+      /* =================================================
+         MENU MOBILE
+         Controlado aqui para não depender do script externo.
+      ================================================= */
+
+      const menuToggle = document.querySelector(".menu-toggle");
+      const mainNav = document.getElementById("main-nav");
+
+      function setMenu(open) {
+        if (!menuToggle || !mainNav) return;
+
+        document.body.classList.toggle("lamont-menu-open", open);
+        menuToggle.setAttribute("aria-expanded", open ? "true" : "false");
+        menuToggle.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
+      }
+
+      if (menuToggle && mainNav) {
+
+        /* Captura antes de outros listeners para evitar abrir/fechar duas vezes. */
+        menuToggle.addEventListener("click", function (event) {
+          event.preventDefault();
+          event.stopImmediatePropagation();
+
+          const open = !document.body.classList.contains("lamont-menu-open");
+          setMenu(open);
+        }, true);
+
+        mainNav.querySelectorAll("a").forEach(function (link) {
+          link.addEventListener("click", function () {
+            setMenu(false);
+          });
+        });
+
+        document.addEventListener("click", function (event) {
+          if (!document.body.classList.contains("lamont-menu-open")) return;
+
+          if (
+            !mainNav.contains(event.target) &&
+            !menuToggle.contains(event.target)
+          ) {
+            setMenu(false);
+          }
+        });
+
+        window.addEventListener("resize", function () {
+          if (window.innerWidth > 900) {
+            setMenu(false);
+          }
+        });
+      }
+
+
+      /* =================================================
+         CARROSSEL AUTOMÁTICO — PC + CELULAR
+      ================================================= */
+
+      const carousel = document.getElementById("banner-carousel");
+      const track = document.getElementById("banner-track");
+      const dots = Array.from(document.querySelectorAll(".banner-dot"));
+
+      if (!carousel || !track) return;
+
+      const slides = Array.from(track.querySelectorAll(".banner-slide"));
+
+      if (!slides.length) return;
+
+      let current = 0;
+      let autoplay = null;
+      let touchStartX = 0;
+      let touchEndX = 0;
+
+      function showSlide(index) {
+        current = (index + slides.length) % slides.length;
+
+        track.style.transform =
+          "translate3d(-" + (current * 100) + "%, 0, 0)";
+
+        dots.forEach(function (dot, i) {
+          const active = i === current;
+
+          dot.classList.toggle("active", active);
+
+          if (active) {
+            dot.setAttribute("aria-current", "true");
+          } else {
+            dot.removeAttribute("aria-current");
+          }
+        });
+      }
+
+      function nextSlide() {
+        showSlide(current + 1);
+      }
+
+      function stopAutoplay() {
+        if (autoplay) {
+          clearInterval(autoplay);
+          autoplay = null;
+        }
+      }
+
+      function startAutoplay() {
+        stopAutoplay();
+
+        /* Passa tanto no computador quanto no celular. */
+        autoplay = setInterval(nextSlide, 4500);
+      }
+
+      dots.forEach(function (dot, index) {
+        dot.addEventListener("click", function () {
+          showSlide(index);
+          startAutoplay();
+        });
+      });
+
+      /* Arrastar com o dedo no celular. */
+      carousel.addEventListener(
+        "touchstart",
+        function (event) {
+          touchStartX = event.changedTouches[0].clientX;
+          stopAutoplay();
+        },
+        { passive: true }
+      );
+
+      carousel.addEventListener(
+        "touchend",
+        function (event) {
+          touchEndX = event.changedTouches[0].clientX;
+
+          const distance = touchStartX - touchEndX;
+
+          if (Math.abs(distance) > 45) {
+            showSlide(distance > 0 ? current + 1 : current - 1);
+          }
+
+          startAutoplay();
+        },
+        { passive: true }
+      );
+
+      /* Pausa quando a aba não está visível. */
+      document.addEventListener("visibilitychange", function () {
+        if (document.hidden) {
+          stopAutoplay();
+        } else {
+          startAutoplay();
+        }
+      });
+
+      showSlide(0);
+      startAutoplay();
+    });
+  </script>
+
+
+  <!-- WHATSAPP LATERAL -->
+  <a
+    class="floating-whatsapp"
+    href="https://wa.me/5524981829116?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20LaMont."
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Agendar avaliação pelo WhatsApp"
+  >
+    <svg
+      class="floating-whatsapp-icon"
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+    >
+      <path
+        fill="currentColor"
+        d="M12.04 2a9.84 9.84 0 0 0-8.4 14.96L2 22l5.2-1.62A9.9 9.9 0 1 0 12.04 2Zm0 17.96a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.08.96 1-3-.2-.31a8.13 8.13 0 1 1 6.71 3.66Zm4.46-6.08c-.24-.12-1.44-.71-1.66-.79-.23-.08-.39-.12-.56.12-.16.25-.64.79-.79.95-.14.17-.29.19-.53.07-.25-.12-1.03-.38-1.96-1.21-.73-.65-1.22-1.45-1.36-1.69-.14-.24-.02-.37.1-.49.11-.11.25-.29.37-.43.12-.14.16-.24.24-.41.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.41-.56-.42h-.47c-.16 0-.43.06-.65.31-.23.24-.86.84-.86 2.05 0 1.2.88 2.37 1 2.53.12.16 1.73 2.64 4.19 3.7.59.25 1.04.4 1.4.51.59.19 1.12.16 1.54.1.47-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28Z"
+      />
+    </svg>
+
+    <span>Agendar avaliação</span>
+  </a>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const carousel = document.getElementById("instagram-carousel");
+      const track = document.getElementById("instagram-track");
+      const dots = Array.from(document.querySelectorAll(".instagram-dot"));
+
+      if (!carousel || !track) return;
+
+      const slides = Array.from(track.querySelectorAll(".instagram-slide"));
+
+      if (!slides.length) return;
+
+      let current = 0;
+      let startX = 0;
+      let endX = 0;
+      let dragging = false;
+
+      function showSlide(index) {
+        current = (index + slides.length) % slides.length;
+
+        track.style.transform =
+          "translate3d(-" + (current * 100) + "%, 0, 0)";
+
+        dots.forEach(function (dot, i) {
+          const active = i === current;
+
+          dot.classList.toggle("active", active);
+
+          if (active) {
+            dot.setAttribute("aria-current", "true");
+          } else {
+            dot.removeAttribute("aria-current");
+          }
+        });
+      }
+
+      dots.forEach(function (dot, index) {
+        dot.addEventListener("click", function () {
+          showSlide(index);
+        });
+      });
+
+      /* Swipe no celular */
+      carousel.addEventListener(
+        "touchstart",
+        function (event) {
+          startX = event.changedTouches[0].clientX;
+        },
+        { passive: true }
+      );
+
+      carousel.addEventListener(
+        "touchend",
+        function (event) {
+          endX = event.changedTouches[0].clientX;
+
+          const distance = startX - endX;
+
+          if (Math.abs(distance) > 45) {
+            showSlide(distance > 0 ? current + 1 : current - 1);
+          }
+        },
+        { passive: true }
+      );
+
+      /* Arrastar com o mouse no computador */
+      carousel.addEventListener("mousedown", function (event) {
+        dragging = true;
+        startX = event.clientX;
+        carousel.style.cursor = "grabbing";
+      });
+
+      window.addEventListener("mouseup", function (event) {
+        if (!dragging) return;
+
+        dragging = false;
+        endX = event.clientX;
+        carousel.style.cursor = "grab";
+
+        const distance = startX - endX;
+
+        if (Math.abs(distance) > 60) {
+          showSlide(distance > 0 ? current + 1 : current - 1);
+        }
+      });
+
+      carousel.style.cursor = "grab";
+
+      showSlide(0);
+    });
+  </script>
+
+  <script async src="https://www.instagram.com/embed.js"></script>
+
+</body>
+</html>
